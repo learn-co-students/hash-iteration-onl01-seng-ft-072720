@@ -1,12 +1,28 @@
-# birthday_kids = {
-#   "Timmy" => 9,
-#   "Sarah" => 6,
-#   "Amanda" => 27
-# }
+require 'pry'
 
-def happy_birthday(birthday_kids)
-  birthday_kids.each do |name, age|
-    puts "Happy Birthday #{name}! You are now #{age} years old!"
+  # This is the array we will be passing into the remove_strawberry method
+  # contacts = {
+  #   "Jon Snow" => {
+  #     name: "Jon",
+  #     email: "jon_snow@thewall.we",
+  #     favorite_ice_cream_flavors: ["chocolate", "vanilla"]
+  #   },
+  #   "Freddy Mercury" => {
+  #     name: "Freddy",
+  #     email: "freddy@mercury.com",
+  #     favorite_ice_cream_flavors: ["strawberry", "cookie dough", "mint chip"]
+  #   }
+  # }
+
+def remove_strawberry(contacts)
+  contacts.each do |person, contact_details_hash|
+    contact_details_hash.each do |attribute, data|
+      if attribute == :favorite_ice_cream_flavors
+        data.delete_if{|ice_cream| ice_cream == "strawberry"}
+      end
+      def age_appropriate_birthday
+      end
+    end
   end
 end
 
